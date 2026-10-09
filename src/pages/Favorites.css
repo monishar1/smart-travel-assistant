@@ -1,0 +1,525 @@
+/* ================================
+   FAVORITES PAGE
+================================ */
+
+.favorites-page {
+  min-height: 100vh;
+  background: #07111f;
+  color: #ffffff;
+}
+
+/* ================================
+   HERO
+================================ */
+
+.favorites-hero {
+  min-height: 430px;
+  padding: 110px 8% 80px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  position: relative;
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(4, 12, 24, 0.96) 0%,
+      rgba(4, 12, 24, 0.86) 30%,
+      rgba(4, 12, 24, 0.55) 65%,
+      rgba(4, 12, 24, 0.25) 100%
+    ),
+    url("../assets/favorites-hero.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  box-sizing: border-box;
+}
+
+.favorites-hero span {
+  color: #d4af37;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 18px;
+}
+
+.favorites-hero h1 {
+  margin: 0;
+  font-size: clamp(42px, 5vw, 72px);
+  line-height: 1.05;
+  font-weight: 400;
+  letter-spacing: -2px;
+}
+
+.favorites-hero h1 strong {
+  color: #d4af37;
+  font-weight: 700;
+}
+
+.favorites-hero p {
+  max-width: 520px;
+  margin-top: 22px;
+  color: #c7d0dc;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+/* ================================
+   FAVORITES SECTION
+================================ */
+
+.favorites-section {
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+  padding: 80px 6%;
+  box-sizing: border-box;
+}
+
+.favorites-heading {
+  margin-bottom: 45px;
+}
+
+.favorites-heading span {
+  color: #d4af37;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.favorites-heading h2 {
+  margin: 12px 0 0;
+  font-size: clamp(30px, 4vw, 48px);
+  font-weight: 500;
+  color: #ffffff;
+}
+
+/* ================================
+   EMPTY STATE
+================================ */
+
+.empty-favorites {
+  max-width: 650px;
+  margin: 40px auto;
+  padding: 55px 30px;
+
+  text-align: center;
+
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(212, 175, 55, 0.18);
+  border-radius: 18px;
+
+  box-sizing: border-box;
+}
+
+.empty-favorite-icon {
+  font-size: 55px;
+  margin-bottom: 18px;
+}
+
+.empty-favorites h3 {
+  margin: 0 0 12px;
+  font-size: 25px;
+}
+
+.empty-favorites p {
+  margin: 0;
+  color: #9da9b8;
+  line-height: 1.6;
+}
+
+/* ================================
+   FAVORITES GRID
+================================ */
+
+.favorites-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+}
+
+/* ================================
+   FAVORITE CARD
+================================ */
+
+.favorite-card {
+  padding: 28px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.055),
+      rgba(255, 255, 255, 0.018)
+    );
+
+  border: 1px solid rgba(212, 175, 55, 0.18);
+  border-radius: 18px;
+
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.25);
+
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+
+  box-sizing: border-box;
+}
+
+.favorite-card:hover {
+  transform: translateY(-7px);
+
+  border-color: rgba(212, 175, 55, 0.55);
+
+  box-shadow:
+    0 22px 55px rgba(0, 0, 0, 0.35),
+    0 0 25px rgba(212, 175, 55, 0.08);
+}
+
+/* ================================
+   CARD TOP
+================================ */
+
+.favorite-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.favorite-card-top span {
+  color: #d4af37;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.favorite-card-top button {
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.04);
+  color: #ffffff;
+
+  font-size: 22px;
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.favorite-card-top button:hover {
+  background: rgba(220, 70, 70, 0.15);
+  border-color: rgba(220, 70, 70, 0.5);
+  color: #ff8b8b;
+}
+
+/* ================================
+   FAVORITE ICON
+================================ */
+
+.favorite-icon {
+  width: 65px;
+  height: 65px;
+
+  margin-top: 28px;
+  margin-bottom: 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 16px;
+
+  background: rgba(212, 175, 55, 0.08);
+  border: 1px solid rgba(212, 175, 55, 0.18);
+
+  font-size: 30px;
+}
+
+/* ================================
+   CARD CONTENT
+================================ */
+
+.favorite-card h3 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 27px;
+  font-weight: 600;
+
+  line-height: 1.25;
+}
+
+.favorite-country {
+  margin: 12px 0 25px;
+
+  color: #aeb8c5;
+
+  font-size: 14px;
+}
+
+/* ================================
+   LOCATION DETAILS
+================================ */
+
+.favorite-location {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+
+  margin-bottom: 28px;
+}
+
+.favorite-location > div {
+  padding: 15px;
+
+  background: rgba(255, 255, 255, 0.035);
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 10px;
+}
+
+.favorite-location small {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #7f8b9a;
+
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.favorite-location strong {
+  color: #ffffff;
+  font-size: 16px;
+}
+
+/* ================================
+   REMOVE BUTTON
+================================ */
+
+.remove-favorite-button {
+  width: 100%;
+
+  padding: 13px 18px;
+
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: 9px;
+
+  background: transparent;
+
+  color: #d4af37;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.remove-favorite-button:hover {
+  background: #d4af37;
+  color: #07111f;
+}
+
+/* ================================
+   LARGE DESKTOP
+================================ */
+
+@media (min-width: 1400px) {
+  .favorites-hero {
+    min-height: 500px;
+    padding-left: 9%;
+  }
+
+  .favorites-section {
+    padding-top: 95px;
+    padding-bottom: 100px;
+  }
+
+  .favorite-card {
+    padding: 32px;
+  }
+}
+
+/* ================================
+   LAPTOP
+================================ */
+
+@media (max-width: 1100px) {
+  .favorites-hero {
+    min-height: 400px;
+    padding: 100px 6%;
+  }
+
+  .favorites-section {
+    padding: 65px 5%;
+  }
+
+  .favorites-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 800px) {
+  .favorites-hero {
+    min-height: 370px;
+
+    padding: 90px 30px 65px;
+
+    background-position: center;
+  }
+
+  .favorites-hero span {
+    font-size: 11px;
+    letter-spacing: 2px;
+  }
+
+  .favorites-hero h1 {
+    font-size: 48px;
+  }
+
+  .favorites-hero p {
+    font-size: 15px;
+    max-width: 450px;
+  }
+
+  .favorites-section {
+    padding: 55px 25px;
+  }
+
+  .favorites-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .favorite-card {
+    max-width: 600px;
+    width: 100%;
+    margin: auto;
+  }
+}
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 550px) {
+  .favorites-hero {
+    min-height: 340px;
+    padding: 80px 20px 55px;
+
+    background-position: center;
+  }
+
+  .favorites-hero h1 {
+    font-size: 40px;
+    letter-spacing: -1px;
+  }
+
+  .favorites-hero p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .favorites-section {
+    padding: 45px 18px;
+  }
+
+  .favorites-heading {
+    margin-bottom: 30px;
+  }
+
+  .favorites-heading span {
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+
+  .favorites-heading h2 {
+    font-size: 32px;
+  }
+
+  .favorite-card {
+    padding: 23px;
+    border-radius: 15px;
+  }
+
+  .favorite-card h3 {
+    font-size: 24px;
+  }
+
+  .favorite-location {
+    gap: 10px;
+  }
+
+  .favorite-location > div {
+    padding: 12px;
+  }
+}
+
+/* ================================
+   SMALL MOBILE
+================================ */
+
+@media (max-width: 380px) {
+  .favorites-hero {
+    min-height: 310px;
+    padding: 70px 16px 45px;
+  }
+
+  .favorites-hero h1 {
+    font-size: 34px;
+  }
+
+  .favorites-hero p {
+    font-size: 13px;
+  }
+
+  .favorites-section {
+    padding: 38px 14px;
+  }
+
+  .favorite-card {
+    padding: 20px;
+  }
+
+  .favorite-icon {
+    width: 55px;
+    height: 55px;
+    font-size: 25px;
+  }
+
+  .favorite-card h3 {
+    font-size: 22px;
+  }
+
+  .favorite-location strong {
+    font-size: 14px;
+  }
+
+  .remove-favorite-button {
+    font-size: 12px;
+    padding: 12px;
+  }
+}
